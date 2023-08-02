@@ -5,17 +5,25 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
+
 @Entity
 public class Register
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+
     private String name;
+
     private String surname;
     private String address;
     private String zipcode;
     private String street;
+    private String number;
+    private String telephone;
+
     private String  age;
 
 
@@ -79,4 +87,22 @@ public class Register
     public void setAge(String age) {
         this.age = age;
     }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
 }
+
+
